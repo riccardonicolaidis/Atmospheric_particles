@@ -69,8 +69,25 @@ Il digitizer è un campionatore a 5 Gsps.
 - Direzione verso overst
 - ipotenusa = 0.520 m
 - cateto = 0.224 m
+- **Number of events** = 3124
+- durata 20' 23.58
 
 
+## Direction 3 
+
+- verso overst
+- ipotenusa = 0.520 m 
+- cateto = 0.068 m 
+- **Number of events** = 3059
+- durata 14' 40.07
+
+## Direction 4
+
+- verso est
+- ipotenusa = 0.520 m
+- cateto = 0.201 m 
+- **Number of events** = 1720
+- durata = 10' 0.20
 
 
 
