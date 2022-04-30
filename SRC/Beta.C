@@ -27,9 +27,9 @@ void Beta(TString fname="../LONG/wave_0_reco.root"){
   ToF0->AddFriend(ToF3);
 
   ToF0->SetAlias("T0","(ToF0.Time)");
-  ToF0->SetAlias("T1","(ToF1.Time-(-4.97815e+01-5.01835𝑒+01)/2.)");
-  ToF0->SetAlias("T2","(ToF2.Time-(-2.63188e+01-2.81133𝑒+01)/2.)");
-  ToF0->SetAlias("T3","(ToF3.Time-(-2.68886e+01-2.90723𝑒+01)/2.)");
+  ToF0->SetAlias("T1","(ToF1.Time-(-5.01928e+01-4.97773e+01)/2.)");
+  ToF0->SetAlias("T2","(ToF2.Time-(-2.81118e+01-2.63210e+01)/2.)");
+  ToF0->SetAlias("T3","(ToF3.Time-(-2.90898e+01-2.68916e+01)/2.)");
 
   TCanvas * c1 = new TCanvas();
   TH1D* h1 = new TH1D("h1","",2000,-100,100);
@@ -50,12 +50,14 @@ void Beta(TString fname="../LONG/wave_0_reco.root"){
   gPad->SetLogy();
 
   TCanvas * c4 = new TCanvas();
-  ToF0->SetAlias("beta","(330.5/(T0-T3))/29.979");
+  ToF0->SetAlias("beta","(365/(T0-T3))/29.979");
   ToF0->SetAlias("TRMS","(sqrt((T1*T1+T2*T2+T3*T3)/3.-(T1+T2+T3)*(T1+T2+T3)/9.))");
   TH2D* h2b = new TH2D("h2b","",200,-2,2,200,-2,2);
   ToF0->Draw("1./beta:log10(TRMS)>>h2b","","colz");
 
   TCanvas * c5 = new TCanvas();
-  ToF0->Draw("1./beta","abs(1/beta+1)<1","colz");
+  TH1D* h4 = new TH1D("h4","",200,-2,0);
+  ToF0->Draw("1./beta>>h4","abs(1/beta+1)<1");
+  h4->Fit("gaus","L");
   return;
 }
