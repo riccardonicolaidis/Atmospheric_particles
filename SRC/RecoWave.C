@@ -118,17 +118,17 @@ void RecoWave(TString fname, int fixpend=0, int gverbose=0, int eventplot=-1){
       
       for(int ipt = 0; ipt<200; ipt++) {smwave[ipt]=0;}
       for(int ipt = 0; ipt<npt; ipt++) { 
-	smwave[ipt/10]+=wave[ipt]/10.; //crea una smoothwave mediando 10pt
-	if(ipt<1000){
-	  if(wave[ipt]<vmin) {vmin=wave[ipt]; tmin=ipt;}
-	  if(wave[ipt]>vmax) {vmax=wave[ipt]; tmax=ipt;}      
-	  if(wave[ipt]<bs-2500) {natm2500++;}
-	  if(wave[ipt]<bs-1250) {natm1250++;}
-	  if(wave[ipt]<bs-500) {natm500++;}
-	  if(wave[ipt]>bs+600) {nat600++;}
-	  if(wave[ipt]>bs+300) {nat300++;}
-	  if(wave[ipt]>bs+120) {nat120++;}
-	}
+				smwave[ipt/10]+=wave[ipt]/10.; //crea una smoothwave mediando 10pt
+				if(ipt<1000){
+					if(wave[ipt]<vmin) {vmin=wave[ipt]; tmin=ipt;}
+					if(wave[ipt]>vmax) {vmax=wave[ipt]; tmax=ipt;}      
+					if(wave[ipt]<bs-2500) {natm2500++;}
+					if(wave[ipt]<bs-1250) {natm1250++;}
+					if(wave[ipt]<bs-500) {natm500++;}
+					if(wave[ipt]>bs+600) {nat600++;}
+					if(wave[ipt]>bs+300) {nat300++;}
+					if(wave[ipt]>bs+120) {nat120++;}
+				}
       }
 
       
