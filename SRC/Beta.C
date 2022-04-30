@@ -1,3 +1,4 @@
+// Macro per calcolare la velocità dei muoni
 void Beta(TString fname="../GROUPB/LONG/wave_0_reco.root"){
   //fname="../GROUPB/SHORT/wave_0_reco.root";
   //  fname="../GROUPB/FLIP/wave_0_reco.root";
