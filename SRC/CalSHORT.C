@@ -1,5 +1,5 @@
-void CalSHORT(TString fname="../GROUPB/SHORT/wave_0_reco.root"){
-  fname="../GROUPB/FLIP/wave_0_reco.root";
+void CalSHORT(TString fname="../FLIP/wave_0_reco.root"){
+  //cout<<fname.Data()<<endl;
   TFile* F0 = TFile::Open(fname.Data());
   TTree* ToF0 = (TTree*) F0->Get("tree");
   ToF0->SetName("ToF0");
