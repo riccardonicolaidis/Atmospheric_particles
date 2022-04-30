@@ -27,9 +27,9 @@ void Beta(TString fname="../LONG/wave_0_reco.root"){
   ToF0->AddFriend(ToF3);
 
   ToF0->SetAlias("T0","(ToF0.Time)");
-  ToF0->SetAlias("T1","(ToF1.Time-(−4.97815𝑒+01-5.01835𝑒+01)/2.)");
-  ToF0->SetAlias("T2","(ToF2.Time-(−2.63188𝑒+01-2.81133𝑒+01)/2.)");
-  ToF0->SetAlias("T3","(ToF3.Time-(−2.68886𝑒+01-2.90723𝑒+01)/2.)");
+  ToF0->SetAlias("T1","(ToF1.Time-(-4.97815e+01-5.01835𝑒+01)/2.)");
+  ToF0->SetAlias("T2","(ToF2.Time-(-2.63188e+01-2.81133𝑒+01)/2.)");
+  ToF0->SetAlias("T3","(ToF3.Time-(-2.68886e+01-2.90723𝑒+01)/2.)");
 
   TCanvas * c1 = new TCanvas();
   TH1D* h1 = new TH1D("h1","",2000,-100,100);
